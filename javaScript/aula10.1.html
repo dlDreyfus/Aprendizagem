@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição da sua página aqui.">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+
+    <!-- Título da Página (aparece na aba do navegador) -->
+    <title>Dreyfus</title>
+    <style>
+        body{
+
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #070b46;
+            color: white;
+        }
+            
+         div#area{ /*hashtag para ID*/
+
+            font: normal 20 pt Arial;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #195e10;
+            color: white;
+            width: 200 px;
+            height: 200 px;
+            line-height: 200 px;
+            text-align: center;
+        }
+
+         div#area2{ /*hashtag para ID*/
+
+            font: normal 20 pt Arial;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #195e10;
+            color: white;
+            width: 200 px;
+            height: 200 px;
+            line-height: 200 px;
+            text-align: center;
+        }
+
+    </style>
+  
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Aula 10.1</h1>
+        <h2>Gustavo Guanabara</h2>
+        <h3>https://www.youtube.com/watch?v=wWnBB-mZIvY&t=3s</h3>
+    </header>
+    <!-- Conteúdo principal da página -->
+     <!-- Disparo de eventos com HTML -->
+    <main>
+        <h2>EVENTOS</h2>     
+        <h3> Disparo de eventos com HTML</h3>
+        <div id="area" onclick = "clicar()" onmouseenter="entrar()" onmouseout="sair()"> 
+            Clique aqui!
+        </div>
+        <hr>
+        <h3> Disparo de eventos com Listener</h3>
+        <div id="area2"> 
+            Clique aqui!
+        </div>
+
+        <script>
+            var a = window.document.getElementById("area");
+            var b = window.document.getElementById("area2");
+
+            b.addEventListener("click", clicar2);//Evendo e chamada de função
+            b.addEventListener("mouseenter", entrar2);//Evendo e chamada de função
+            b.addEventListener("mouseout", sair2);//Evendo e chamada de função
+
+            function clicar(){                
+                a.innerText = "Clicou! Obrigado!";
+                a.style.backgroundColor = "red";
+                           }
+
+            function entrar(){
+                a.innerText = "Entrou! Obrigado!";
+                a.style.backgroundColor = "green";
+                          }
+
+            function sair(){
+                a.innerText = "Saiu! Obrigado!";
+                a.style.backgroundColor = "blue";
+                          }
+
+             function clicar2(){                
+                b.innerText = "Clicou! Obrigado!";
+                b.style.backgroundColor = "red";
+            }
+
+            function entrar2(){
+                b.innerText = "Entrou! Obrigado!";
+                b.style.backgroundColor = "green";
+            }
+
+            function sair2(){
+                b.innerText = "Saiu! Obrigado!";
+                b.style.backgroundColor = "blue";
+            }
+            document.write("<hr>");           
+            
+        </script>        
+       
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts JavaScript (opcional, geralmente no final do body) -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>

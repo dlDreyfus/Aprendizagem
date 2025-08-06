@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Metadados essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descrição da sua página aqui.">
+    <meta name="author" content="Seu Nome ou Nome da Empresa">
+
+    <!-- Título da Página (aparece na aba do navegador) -->
+    <title>Dreyfus</title>
+    <style>
+        body{
+
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #070b46;
+            color: white;
+        }
+            
+         div#area{ /*hashtag para ID*/
+
+            font: normal 20 pt Arial;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #195e10;
+            color: white;
+            width: 200 px;
+            height: 200 px;
+            line-height: 200 px;
+            text-align: center;
+        }
+
+         div#area2{ /*hashtag para ID*/
+
+            font: normal 20 pt Arial;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #195e10;
+            color: white;
+            width: 200 px;
+            height: 200 px;
+            line-height: 200 px;
+            text-align: center;
+        }
+
+    </style>
+  
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Aula 10.2</h1>
+        <h2>Gustavo Guanabara</h2>
+        <h3>https://www.youtube.com/watch?v=wWnBB-mZIvY&t=3s</h3>
+    </header>
+    <!-- Conteúdo principal da página -->
+     <!-- Disparo de eventos com HTML -->
+    <main>
+        <h2>EVENTOS</h2>     
+        <h3> Soma de valores com o DOM</h3>
+        <hr>
+        <input type = "text" id = "ipt1" placeholder="Digite o primeiro valor">+
+        <input type = "text" id = "ipt2" placeholder="Digite o Segundo valor">=
+        <input type = "text" id = "res" placeholder="Resultado"><br>
+        <button onclick="somar()">Somar</button>
+        <button onclick="limpar()">Limpar</button>
+        
+        <hr>
+
+        <script>
+            function somar(){
+                var n1 = Number(window.document.getElementById("ipt1").value);
+                var n2 = Number(window.document.getElementById("ipt2").value);
+                var soman1n2 = window.document.getElementById("res");
+                soman1n2.value = `A soma de ${n1} e ${n2} é ${n1+n2}.`;
+            }      
+            
+            function limpar(){
+                window.document.getElementById("ipt1").value = "";
+                window.document.getElementById("ipt2").value = "";
+                window.document.getElementById("res").value = "";
+                window.document.getElementById("ipt1").focus();
+            }
+        </script>        
+       
+    </main>
+    <!-- Rodapé da página -->
+    <footer>
+        <p>&copy; 2024 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts JavaScript (opcional, geralmente no final do body) -->
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>
