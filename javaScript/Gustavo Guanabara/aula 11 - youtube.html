@@ -19,10 +19,32 @@
 
     <main>
         <h2>Condicionais em JavaScript</h2>
+        <h1>Sistema de Multas.</h1>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> KM/h
+        <input type="button" value="Verificar" onclick="calcular()"><!--Lembrar de colocar os parênteses para instanciar a função-->
+        <hr>
+        <div id="resultado"></div>
+
+        <script>
+            function calcular() {
+                const txtvelocidade = document.getElementById("txtvel"); 
+                const velocidade = Number(txtvelocidade.value);
+                const mensagem = document.getElementById("resultado");
+
+                if (velocidade > 80) {
+                    mensagem.innerHTML = `Sua velocidade de ${velocidade} KM/h superou o limite máximo de 80 KM/h. <strong>MULTADO!</strong>`;
+                } else {
+                    mensagem.innerHTML = `Sua velocidade é de ${velocidade} KM/h. Você está dentro do limite. Dirija com segurança!`;
+                }
+            }
+        </script>
+
     </main>
 
     <footer>
+        <hr>
         <p>&copy; 2025 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+        <hr>
     </footer>
 
     </body>
