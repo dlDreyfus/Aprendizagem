@@ -33,11 +33,16 @@
         Informe sua Idade: <input type="number" id = "txtIdade"> anos
         <input type="button" value = "Verificar" onclick="calcularVoto()">
         <hr>
-        <div id= "vericandoIdadeVoto"></div>
+        <div id= "verificandoIdadeVoto"></div>
         <hr>
 
         <h1>Exercício 03 - SWITCH CASE</h1>
-        <h2 style="color: red; font-style: italic;">Exercício Pendente</h2>
+        <h2>Dia da Semana</h2>
+        Informe o dia da semana: <input type = "text" id = "txtDiaDaSemana">
+        <input type="button" value="Verificar" onclick="verificarDiaSemana()">
+        <hr>
+        <div id = "resultadoDiaSemana"></div>
+        <hr> 
 
         <script>
             function calcular() {//Função para calcular se Multado ou não
@@ -71,6 +76,38 @@
 
             }
 
+            function verificarDiaSemana() {
+                let txtDiaSemana = document.getElementById ("txtDiaDaSemana");
+                let diaDaSemana = String(txtDiaSemana.value).toLowerCase();//Se o usuário digitar com inicial maiúscula, o algoritmo é executado da mesma forma
+                let mensagemDiaDaSemana = document.getElementById("resultadoDiaSemana");
+
+                switch (diaDaSemana) {
+                    case "domingo":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} não é um dia útil.`;
+                        break;
+                    case "segunda":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} é um dia útil.`;
+                        break;
+                    case "terça":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} é um dia útil.`;
+                        break;
+                    case "quarta":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} é um dia útil.`;
+                        break;
+                    case "quinta":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} é um dia útil.`;
+                        break;
+                    case "sexta":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} é um dia útil.`;
+                        break;
+                    case "sábado":
+                        mensagemDiaDaSemana.innerHTML = `${diaDaSemana} não é um dia útil.`;
+                        break;
+                    default:
+                        mensagemDiaDaSemana.innerHTML = `O dia da semana digitado não é válido. Por favor, digite um dia válido (domingo, segunda, terça, quarta, quinta, sexta ou sábado).`;
+                        break;
+                }
+            }
 
         </script>
 
