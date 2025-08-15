@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script Aula 12</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Aula 12 - Youtube Gustavo Guanabara</h1>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=EEStcIe8rAM">Aula 12 - Youtube</a> |
+        </nav>
+    </header>
+
+    <main>
+        <h2>Condicionais Aninhadas em JavaScript</h2>
+
+        <h1>Exercício 01 - IF/ELSE</h1>
+        <h2>Sistema de Multas.</h2>
+        Velocidade do carro: <input type="number" id="txtvel"> KM/h
+        <input type="button" value="Verificar" onclick="calcular()"><!--Lembrar de colocar os parênteses para instanciar a função-->
+        <hr>
+        <div id="resultado"></div>
+        <hr>
+
+        <h1>Exercício 02 - IF/ELSE IF/ ELSE</h1>
+        <h2>Idade para Votação.</h2>
+        Informe sua Idade: <input type="number" id = "txtIdade"> anos
+        <input type="button" value = "Verificar" onclick="calcularVoto()">
+        <hr>
+        <div id= "vericandoIdadeVoto"></div>
+        <hr>
+
+        <h1>Exercício 03 - SWITCH CASE</h1>
+        <h2 style="color: red; font-style: italic;">Exercício Pendente</h2>
+
+        <script>
+            function calcular() {//Função para calcular se Multado ou não
+                let txtvelocidade = document.getElementById("txtvel"); 
+                let velocidade = Number(txtvelocidade.value);
+                let mensagem = document.getElementById("resultado");
+
+                if (velocidade > 80) {
+                    mensagem.innerHTML = `Sua velocidade de ${velocidade} KM/h superou o limite máximo de 80 KM/h. <strong>MULTADO!</strong>`;
+
+                } else {
+                    mensagem.innerHTML = `Sua velocidade é de ${velocidade} KM/h. Você está dentro do limite. Dirija com segurança!`;
+
+                }
+            }
+
+            function calcularVoto() {//Função para calcular se vota ou não, e se é obrigatório
+                let txtIdade = document.getElementById("txtIdade");//armazena em uma variável o valor digitado no Input txtIdade
+                let idade = Number(txtIdade.value);//armazena no formato de número a variável txtIdade
+                let mensagemVoto = document.getElementById("verificandoIdadeVoto");//Variável que aparecerá na Div de id = "verificandoIdadeVoto"
+
+                if (idade < 16) {
+                    mensagemVoto.innerHTML = `Sua idade é ${idade}. Você tem menos de 16 anos de idade. <strong>Não pode votar!</strong>`;
+                } else if (idade < 18) {
+                    mensagemVoto.innerHTML = `Você tem ${idade} anos de idade. Menor de 18 anos. <strong>Seu voto é opcional</strong>.`;
+                } else if (idade >= 75) {
+                    mensagemVoto.innerHTML = `Você tem ${idade} anos de idade. Maior de 75 anos. <strong>Seu voto é opcional</strong>.`;
+                } else {
+                    mensagemVoto.innerHTML = `Você tem ${idade} anos de idade. Maior de 18 e menor de 75 anos. <strong>Seu voto é obrigatório</strong>.`;
+                }
+
+            }
+
+
+        </script>
+
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+        <hr>
+    </footer>
+
+    </body>
+</html>
