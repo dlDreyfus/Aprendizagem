@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script Aula 14</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Aula 14 - Youtube Gustavo Guanabara</h1>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=eX-lkN_Zahc">Aula 14 - Youtube</a> |
+        </nav>
+    </header>
+
+    <main>
+        <h2> Loopings - Parte 02</h2>
+        <h3>Laços e iterações.</h3>
+        <hr>
+        Escreva o número de início da contagem: <input type="number" id="campoNumeroInicial">
+        <br>
+        Escreva o número de fim da contagem:&nbsp; &nbsp; &nbsp;<input type="number" id="campoNumeroFinal">
+                               <input type="button" value="Contar" onclick="funcaoContar()">
+        <hr>
+        <div id = "contadorFor"></div>
+
+        <script>
+            
+            function funcaoContar() {//as variáveis devem ser declaradas dentro da função para que não sejam globais e, consequentemente, não sejam zero
+                let varMensagens = document.getElementById("contadorFor");
+                let varNumeroFinal = Number(document.getElementById("campoNumeroFinal").value);
+                for (varNumeroInicial = Number(document.getElementById("campoNumeroInicial").value); varNumeroInicial <= varNumeroFinal; varNumeroInicial++) {
+                   varMensagens.innerHTML += `${varNumeroInicial}<br>`;
+                }
+                    varMensagens.innerHTML += `Fim da contagem! <br>
+                                               Número Inicial: ${document.getElementById("campoNumeroInicial").value}<br>
+                                               Número Final: ${document.getElementById("campoNumeroFinal").value}<br>`;
+            }
+        </script>
+
+
+    </main>
+   
+         
+      
+
+    
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+        <hr>
+    </footer>
+
+    </body>
+</html>
