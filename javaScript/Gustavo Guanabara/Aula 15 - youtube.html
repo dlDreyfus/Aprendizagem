@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script Aula 15</title>
+
+</head>
+<body>
+
+    <header>
+        <h1>Aula 15 - Youtube Gustavo Guanabara</h1>
+        <nav>
+            <a href="https://www.youtube.com/watch?v=XdkW62tkAgU">Aula 15 - Youtube</a> |
+        </nav>
+    </header>
+
+    <main>
+        <h1> Variáveis compostas</h1>
+        <h2>Arrays</h2>
+            Insira o Primeiro número do Array: <input type="number" id = "txtNumero01">
+            <br>
+            Insira o Segundo número do Array: <input type="number" id = "txtNumero02">
+            <br>
+            Insira o Terceiro número do Array: &nbsp;<input type="number" id = "txtNumero03">
+            <br>
+            Insira o Quarto número do Array: &nbsp; &nbsp;<input type="number" id = "txtNumero04">
+            <br><br>
+            <input type = "button" value="Criar Array" onclick = "criarArrayFor();criarArrayForIn();criarArrayOrdemCrescente();criarArrayOrdemDecrescente()">
+            <br>
+        <hr>
+            <h3>Início da Contagem de Array usando For</h3>
+            <div id="mensagemArrayFor"></div>
+            <h3>Fim da Contagem de Array usando For</h3>
+        <hr>      
+            <h3>Início da Contagem de Array usando ForIn</h3>
+            <div id = "mensagemArrayForIn"></div>   
+            <h3>Fim da Contagem de Array usando ForIn</h3>
+        
+        <hr>      
+            <h3>Reorganização do Array em ordem crescente.</h3>
+            <div id = "mensagemArrayOrdemCrescente"></div>   
+            
+        <hr>      
+            <h3>Reorganização do Array em ordem decrescente.</h3>
+            <div id = "mensagemArrayOrdemDecrescente"></div>   
+            
+
+
+        <script>
+            function criarArrayFor(){
+                let num1 = Number(document.getElementById("txtNumero01").value);
+                let num2 = Number(document.getElementById("txtNumero02").value);
+                let num3 = Number(document.getElementById("txtNumero03").value);
+                let num4 = Number(document.getElementById("txtNumero04").value);
+
+                let varArray =  [num1, num2, num3, num4];
+                
+                for (let pos = 0; pos < varArray.length; pos++){
+                    
+                    document.getElementById("mensagemArrayFor").innerHTML += `O índice ${pos} corresponde ao valor ${varArray[pos]}<br>`;                    
+                    
+                }
+
+            } 
+        document.write("<hr>"); 
+            function criarArrayForIn() {
+                let num1ForIn = Number(document.getElementById("txtNumero01").value);
+                let num2ForIn = Number(document.getElementById("txtNumero02").value);
+                let num3ForIn = Number(document.getElementById("txtNumero03").value);
+                let num4ForIn = Number(document.getElementById("txtNumero04").value);
+
+                let varArrayForIn =  [num1ForIn, num2ForIn, num3ForIn, num4ForIn];
+                
+                for (let posForIn in varArrayForIn) {
+                    
+                    document.getElementById("mensagemArrayForIn").innerHTML += `O índice ${posForIn} corresponde ao valor ${varArrayForIn[posForIn]}<br>`;
+                                        
+                }
+            }
+        document.write("<hr>");
+            function criarArrayOrdemCrescente() {
+                let numOrd01 = Number(document.getElementById("txtNumero01").value);
+                let numOrd02 = Number(document.getElementById("txtNumero02").value);
+                let numOrd03 = Number(document.getElementById("txtNumero03").value);
+                let numOrd04 = Number(document.getElementById("txtNumero04").value);
+
+                let arrayOrdenado = [numOrd01,numOrd02,numOrd03,numOrd04];                                   
+                                     
+                document.getElementById("mensagemArrayOrdemCrescente").innerHTML += `${arrayOrdenado.sort((a,b) => a-b)}<br>`;
+            }
+        
+        document.write("<hr>");
+            function criarArrayOrdemDecrescente() {
+                let numOrdDec01 = Number(document.getElementById("txtNumero01").value);
+                let numOrdDec02 = Number(document.getElementById("txtNumero02").value);
+                let numOrdDec03 = Number(document.getElementById("txtNumero03").value);
+                let numOrdDec04 = Number(document.getElementById("txtNumero04").value);
+
+                let arrayOrdenadoDec = [numOrdDec01,numOrdDec02,numOrdDec03,numOrdDec04];                                   
+                                     
+                document.getElementById("mensagemArrayOrdemDecrescente").innerHTML += `${arrayOrdenadoDec.sort((a,b) => b-a)}<br>`;
+            }
+
+            
+        </script>
+
+
+    </main>  
+
+    <footer>
+        <hr>
+        <p>&copy; 2025 Dreyfus Diogenes de Lima. Todos os direitos reservados.</p>
+        <hr>
+    </footer>
+
+    </body>
+</html>
