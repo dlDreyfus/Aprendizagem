@@ -7,6 +7,7 @@
 
     <title>JS A17 - Objetos</title>
 
+
 </head>
 <body>
 
@@ -18,10 +19,31 @@
     </header>
 
     <main>
-        <h1> Funções</h1>
-        <h2></h2>              
+        <h1> Objetos</h1>
+        <h2>Exercício: Informa o nome, a idade e retorna se é maior ou menor.</h2> 
+        <hr>
+        Informe o nome Completo: <input type="text" id = "txtNomeCompleto" placeholder="Nome Completo"><br> 
+        Informe a Idade: <input type = "idade" id="txtIdade" placeholder="Idade"><br>
+        <input type = "button" value = "Verificar" onclick="funcaoAnalisarMaioridade('txtNomeCompleto', 'txtIdade')"><!--No onclick, passa os valores digitados, em vez do valor qdo a página é carregada, que é zero-->
+        <hr>
+        <div id = "divMensagemRetornoFuncao"></div>
 
-        <script>           
+        <script>                        
+
+            function funcaoAnalisarMaioridade() {   
+                let varNomeCompleto = document.getElementById("txtNomeCompleto").value;//As variáveis devem ficar dentro da função para que não recebam valor 0, valores dos inputs qdo a página HTML é carregada
+                let varIdade = Number(document.getElementById("txtIdade").value);
+                let mensagemRetornoFuncao = document.getElementById("divMensagemRetornoFuncao");  
+                
+                if (varIdade >= 18) {
+                    mensagemRetornoFuncao.innerHTML = `A pessoa: ${varNomeCompleto}, tem ${varIdade} anos de idade e é considerado imputável.`;
+                }else if (varIdade <= 0) {
+                    mensagemRetornoFuncao.innerHTML = `Insira uma Idade válida.`
+                } else {
+                    mensagemRetornoFuncao.innerHTML = `A pessoa ${varNomeCompleto}, tem ${varIdade} ano(s) de idade e é considerado ininputável para fins penais.`;
+                }
+            }
+        //Objeto Pessoa tem: Nome, Idade e uma Função que verifica se a pessoa é imputável ou não.
             
         </script>
 
