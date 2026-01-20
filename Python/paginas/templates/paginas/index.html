@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIPOL 04</title>
+    <link rel="stylesheet" href="static\paginas\estilo.css">
+</head>
+<body>
+
+    <header>
+        <h1>Acompanhamento de Despesas de Execução de Contratos</h1>
+        <h2>DIVISÃO DE PROGRAMAÇÃO E LOGÍSTICA (DIPOL 04)</h2>
+    </header>
+
+    <main>
+        <section id="form-despesa">
+            <h2>Registrar Nova Despesa</h2>
+            <form>
+                <label for="contrato">Número do Contrato:</label><br>
+                <input type="text" id="contrato" name="contrato" placeholder="Ex: 123/2024"><br><br>
+
+                <label for="objeto">Objeto do Contrato:</label><br>
+                <input type="text" id="objeto" name="objeto" placeholder="Ex: Prestação de serviços de limpeza"><br><br>
+
+                <label for="fornecedor">Fornecedor (Contratada):</label><br>
+                <input type="text" id="fornecedor" name="fornecedor" placeholder="Nome da Empresa"><br><br>
+
+                <label for="cnpj">CNPJ do Fornecedor:</label><br>
+                <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0001-00"><br><br>
+
+                <label for="valor">Valor da Despesa (R$):</label><br>
+                <input type="number" id="valor" name="valor" step="0.01" placeholder="1000.00"><br><br>
+
+                <label for="data">Data da Despesa:</label><br>
+                <input type="date" id="data" name="data"><br><br>
+
+                <button type="submit">Adicionar Despesa</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section id="lista-despesas">
+            <h2>Despesas Registradas</h2>
+            <table border="1" style="width:100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th>Número do Contrato</th>
+                        <th>Objeto</th>
+                        <th>Fornecedor</th>
+                        <th>CNPJ</th>
+                        <th>Valor (R$)</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As linhas de despesa serão adicionadas aqui via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 DIVISÃO DE PROGRAMAÇÃO E LOGÍSTICA (DIPOL 04). Todos os direitos reservados.</p>
+        <p>&copy; @dlDreyfus</p>
+    
+    </footer>
+
+</body>
+</html>
